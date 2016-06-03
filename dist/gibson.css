@@ -1,8 +1,88 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
 @import url(https://fonts.googleapis.com/css?family=PT+Mono);
-* + * {
-  margin-bottom: 1em;
-  margin-top: 1em; }
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px; }
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.col + .col {
+  margin-left: 2%; }
+
+.col-1 {
+  width: 6.5%;
+  position: relative;
+  float: left; }
+
+.col-2 {
+  width: 15%;
+  position: relative;
+  float: left; }
+
+.col-3 {
+  width: 23.5%;
+  position: relative;
+  float: left; }
+
+.col-4 {
+  width: 32%;
+  position: relative;
+  float: left; }
+
+.col-5 {
+  width: 40.5%;
+  position: relative;
+  float: left; }
+
+.col-6 {
+  width: 49%;
+  position: relative;
+  float: left; }
+
+.col-7 {
+  width: 57.5%;
+  position: relative;
+  float: left; }
+
+.col-8 {
+  width: 66%;
+  position: relative;
+  float: left; }
+
+.col-9 {
+  width: 74.5%;
+  position: relative;
+  float: left; }
+
+.col-10 {
+  width: 83%;
+  position: relative;
+  float: left; }
+
+.col-11 {
+  width: 91.5%;
+  position: relative;
+  float: left; }
+
+.col-12 {
+  width: 100%;
+  position: relative;
+  float: left; }
+
+.col-demo {
+  border: 1px solid #C7CCDB;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  text-align: center; }
 
 html,
 body {
@@ -12,6 +92,16 @@ body {
   font-family: "Oswald", sans-serif;
   color: #2A324B;
   line-height: 1.35; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 1em;
+  margin-bottom: 1em; }
 
 h1,
 h2,

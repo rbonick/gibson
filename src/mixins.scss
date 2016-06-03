@@ -1,3 +1,11 @@
 @mixin font-size($font-size, $base: $font-base-size) {
 	font-size: ($font-size / $base) + em;
 }
+
+@mixin clearfix() {
+	&:after {
+		content: "";
+		display: table;
+		clear:both;
+	}
+}
