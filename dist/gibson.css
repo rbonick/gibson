@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
+@import url(https://fonts.googleapis.com/css?family=PT+Mono);
+* + * {
+  margin-bottom: 1em;
+  margin-top: 1em; }
+
+html,
+body {
+  font-size: 16px; }
+
+* {
+  font-family: "Oswald", sans-serif;
+  color: #2A324B;
+  line-height: 1.35; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700; }
+
+h1 {
+  font-size: 2.25em; }
+
+h2 {
+  font-size: 1.875em; }
+
+h3 {
+  font-size: 1.5em; }
+
+h4 {
+  font-size: 1.125em; }
+
+h5 {
+  font-size: 0.875em; }
+
+h6 {
+  font-size: 0.75em; }
+
+code,
+pre {
+  font-family: "PT Mono", monospace;
+  display: block; }
+
+code {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #2A324B;
+  color: #C7CCDB;
+  white-space: pre-line; }
+
+small {
+  font-size: 0.75em;
+  color: #767B91; }
