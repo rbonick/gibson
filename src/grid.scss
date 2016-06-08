@@ -1,18 +1,21 @@
 $numCols: 12;
 $gutter: 2%;
 
-.container {
+@mixin container-base() {
     margin-left: auto;
     margin-right: auto;
+
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.container {
+    @include container-base();
     max-width: 1150px;
 }
 
 .container-fluid {
-    margin-left: auto;
-    margin-right: auto;
-
-    padding-left: $gutter;
-    padding-right: $gutter;
+    @include container-base();
 }
 
 .container-inverse {
@@ -44,16 +47,22 @@ $gutter: 2%;
     }
 
     .col-sm-#{$i} {
+        // Column width * column number + (margin * (column number - 1))
+        width: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i - 1));
+    }
+
+    .col-md-#{$i} {
         @media($tablet) {
             // Column width * column number + (margin * (column number - 1))
             width: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i - 1));
         }
     }
 
-    .col-md-#{$i} {
-
-        // Column width * column number + (margin * (column number - 1))
-        width: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i - 1));
+    .col-lg-#{$i} {
+        @media($desktop) {
+            // Column width * column number + (margin * (column number - 1))
+            width: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i - 1));
+        }
     }
 
     .col.col-offset-#{$i} {
