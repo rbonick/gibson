@@ -15,7 +15,8 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+code {
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
@@ -67,6 +68,8 @@ code {
 	color: $color-text-inverse;
 
 	white-space: pre-line;
+
+    line-height: 1.5;
 }
 
 small {

@@ -17,11 +17,19 @@ $gutter: 2%;
 
 @for $i from 1 through $numCols {
     .col-#{$i} {
-        // Column width * column number + (margin * (column number - 1)
+        // Column width * column number + (margin * (column number - 1))
         width: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i - 1));
 
         position: relative;
         float: left;
+    }
+
+    .col.col-offset-#{$i} {
+        margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i + 1));
+
+        &:first-child {
+            margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * $i);
+        }
     }
 }
 

@@ -1,5 +1,16 @@
-*, *:after, *:before {
+*,
+*:after,
+*:before {
     margin: 0;
     padding: 0;
 	box-sizing: border-box;
+}
+
+main,
+section,
+header,
+footer,
+article {
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
