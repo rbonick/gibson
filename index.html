@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col col-10 col-offset-1">
+                    <div class="col col-12">
 
 						<h1>Heading 1 <small>Small</small></h1>
 						<h2>Heading 2 <small>Small</small></h2>
@@ -39,6 +39,7 @@
 				</div>
                 <div class="row">
                     <div class="col col-12">
+                        <h4>Example Code</h4>
                         <code>  &lt;h1&gt;Heading 1 &lt;small&gt;Small&lt;/small&gt;&lt;/h1&gt;
                                 &lt;h2&gt;Heading 2 &lt;small&gt;Small&lt;/small&gt;&lt;/h2&gt;
                                 &lt;h3&gt;Heading 3 &lt;small&gt;Small&lt;/small&gt;&lt;/h3&gt;
@@ -64,6 +65,10 @@
                             The grid system is mobile up, built around 3 different screen sizes: mobile (<768px),
                             tablet (<1025px), and desktop (>1024px). There are 12 columns, so the screen can easily
                             be split in half, thirds, quarters, or sixths.
+                        </p>
+                        <p>
+                            Grids need to be wrapped in .container and .row block elements (div, main, section, header,
+                            etc).
                         </p>
                     </div>
                 </div>
@@ -183,7 +188,7 @@
                     <div class="col col-12">
                         <h2>Buttons</h2>
                         <p>
-                            Buttons are kept simple: Primary, bordered, and disabled.
+                            Buttons are kept simple: default, bordered, and disabled.
                         </p>
                     </div>
                 </div>
@@ -194,17 +199,35 @@
                         <input type="button" value="Input Button">
                         <input type="submit" value="Input Submit">
                     </div>
+                </div>
+                <div class="row">
                     <div class="col col-12">
                         <a class="button button-bordered" href="#">Link</a>
                         <button class="button-bordered">Button</button>
                         <input class="button-bordered" type="button" value="Input Button">
                         <input class="button-bordered" type="submit" value="Input Submit">
                     </div>
+                </div>
+                <div class="row">
                     <div class="col col-12">
                         <a class="button button-disabled" href="#">Link</a>
                         <button disabled>Button</button>
                         <input type="button" value="Input Button" disabled>
                         <input type="submit" value="Input Submit" disabled>
+                    </div>
+                </div>
+            </section>
+
+            <section class="container-fluid container-inverse">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-12">
+                            <h2>Inverted containers</h2>
+                            <p>
+                                Use an inverted fluid container with a nested regular container for
+                                a full-width inverted section.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>

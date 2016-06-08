@@ -4,24 +4,56 @@ $gutter: 2%;
 .container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1200px;
+    max-width: 1150px;
+}
+
+.container-fluid {
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: $gutter;
+    padding-right: $gutter;
+}
+
+.container-inverse {
+    background-color: $color-dark;
+
+    * {
+        color: $color-text-inverse;
+    }
 }
 
 .row {
     @include clearfix();
 }
 
-.col + .col {
-    margin-left: $gutter;
+.col {
+    width: 100%;
+    position: relative;
+    float: left;
+
+    & + & {
+        margin-left: $gutter;
+    }
 }
 
 @for $i from 1 through $numCols {
     .col-#{$i} {
         // Column width * column number + (margin * (column number - 1))
         width: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i - 1));
+    }
 
-        position: relative;
-        float: left;
+    .col-sm-#{$i} {
+        @media($tablet) {
+            // Column width * column number + (margin * (column number - 1))
+            width: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i - 1));
+        }
+    }
+
+    .col-md-#{$i} {
+
+        // Column width * column number + (margin * (column number - 1))
+        width: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i - 1));
     }
 
     .col.col-offset-#{$i} {

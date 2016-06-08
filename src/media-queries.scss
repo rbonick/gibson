@@ -1,0 +1,5 @@
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1025px;
+
+$tablet: "min-width: #{$tablet-breakpoint}";
+$desktop: "min-width: #{$desktop-breakpoint}";
