@@ -67,30 +67,31 @@ $desktop-container-width: 1050px;
         }
     }
 
+    // TODO: redo grid and fix offsets
     .col-sm-offset-#{$i} {
-        margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i + 1));
+        margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i + 1)) !important;
 
         &:first-child {
-            margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * $i);
+            margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * $i) !important;
         }
     }
 
     .col-md-offset-#{$i} {
         @media($tablet) {
-            margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i + 1));
+            margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i + 1)) !important;
 
             &:first-child {
-                margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * $i);
+                margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * $i) !important;
             }
         }
     }
 
     .col-lg-offset-#{$i} {
         @media($desktop) {
-            margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i + 1));
+            margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i + 1)) !important;
 
             &:first-child {
-                margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * $i);
+                margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * $i) !important;
             }
         }
     }
