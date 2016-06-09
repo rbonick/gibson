@@ -1,0 +1,22 @@
+$form-padding: 5px;
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+
+    padding: $form-padding;
+
+    border: 1px solid $color-dark;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.25em;
+}
+
+textarea {
+    min-height: 100px;
+}

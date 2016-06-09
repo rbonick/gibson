@@ -1,5 +1,6 @@
 $numCols: 12;
 $gutter: 2%;
+$desktop-container-width: 1050px;
 
 @mixin container-base() {
     margin-left: auto;
@@ -11,7 +12,7 @@ $gutter: 2%;
 
 .container {
     @include container-base();
-    max-width: 1150px;
+    max-width: $desktop-container-width;
 }
 
 .container-fluid {
@@ -28,6 +29,7 @@ $gutter: 2%;
 
 .row {
     @include clearfix();
+    margin-bottom: 1em;
 }
 
 .col {
@@ -41,17 +43,15 @@ $gutter: 2%;
 }
 
 @for $i from 1 through $numCols {
-    .col-#{$i} {
-        // Column width * column number + (margin * (column number - 1))
-        width: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i - 1));
-    }
-
     .col-sm-#{$i} {
+        @extend .col;
         // Column width * column number + (margin * (column number - 1))
         width: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i - 1));
     }
 
     .col-md-#{$i} {
+        @extend .col;
+
         @media($tablet) {
             // Column width * column number + (margin * (column number - 1))
             width: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i - 1));
@@ -59,17 +59,39 @@ $gutter: 2%;
     }
 
     .col-lg-#{$i} {
+        @extend .col;
+
         @media($desktop) {
             // Column width * column number + (margin * (column number - 1))
             width: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i - 1));
         }
     }
 
-    .col.col-offset-#{$i} {
+    .col-sm-offset-#{$i} {
         margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i + 1));
 
         &:first-child {
             margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * $i);
+        }
+    }
+
+    .col-md-offset-#{$i} {
+        @media($tablet) {
+            margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i + 1));
+
+            &:first-child {
+                margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * $i);
+            }
+        }
+    }
+
+    .col-lg-offset-#{$i} {
+        @media($desktop) {
+            margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i + 1));
+
+            &:first-child {
+                margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * $i);
+            }
         }
     }
 }
