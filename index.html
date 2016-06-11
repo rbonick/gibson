@@ -252,12 +252,29 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-6 col-md-offset-6">
+                        <div class="col-md-6">
+                            <label for="file">File input</label>
+                            <input type="file" name="file" id="file">
+                        </div>
+                        <div class="col-md-6">
                             <label for="password-confirm">Confirm</label>
                             <input type="password" name="password-confirm" id="password-confirm">
                         </div>
                     </div>
 
+                    <div class="row">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+
+                <form>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Error fields use .form-error. Add it to the label to get the same styling.</p>
+                            <label for="error" class="form-error">Error</label>
+                            <input type="text" name="error" id="error" class="form-error">
+                        </div>
+                    </div>
 
                     <div class="row">
                         <input type="submit" value="Submit your info">
@@ -265,5 +282,15 @@
                 </form>
             </section>
 		</main>
+
+        <footer class="container-fluid container-inverse">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Built by <a href="http://ryanbonick.com/">Ryan Bonick</a>. <small>for fun</small></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
 	</body>
 </html>

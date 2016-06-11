@@ -459,11 +459,19 @@ select,
 textarea {
   width: 100%;
   padding: 5px;
-  border: 1px solid #2A324B; }
+  border: 2px solid #2A324B; }
+  input[type="text"].form-error,
+  input[type="email"].form-error,
+  input[type="password"].form-error,
+  select.form-error,
+  textarea.form-error {
+    border-color: #B6244F; }
 
 label {
   display: block;
   margin-bottom: 0.25em; }
+  label.form-error {
+    color: #B6244F; }
 
 textarea {
   min-height: 100px; }
@@ -477,7 +485,7 @@ input[type="button"] {
   background-color: #2A324B;
   color: #C7CCDB;
   padding: 10px 15px;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   font-size: 1em;
   text-decoration: none; }
   .button:hover,
@@ -490,7 +498,7 @@ input[type="button"] {
   input[type="submit"].button-bordered,
   input[type="button"].button-bordered {
     background-color: #FFFFFF;
-    border: 1px solid #2A324B;
+    border-color: #2A324B;
     color: #2A324B; }
     .button.button-bordered:hover,
     button.button-bordered:hover,
