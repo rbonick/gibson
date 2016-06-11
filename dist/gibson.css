@@ -458,7 +458,7 @@ input[type="password"],
 select,
 textarea {
   width: 100%;
-  padding: 5px;
+  padding: 10px;
   border: 2px solid #2A324B; }
   input[type="text"].form-error,
   input[type="email"].form-error,
