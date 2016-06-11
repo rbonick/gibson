@@ -11,7 +11,7 @@ input[type="button"] {
 
     padding: 10px 15px;
 
-    border: 1px solid transparent;
+    border: 2px solid transparent;
 
     font-size: 1em;
     text-decoration: none;
@@ -22,7 +22,7 @@ input[type="button"] {
 
     &.button-bordered {
         background-color: $color-white;
-        border: 1px solid $color-dark;
+        border-color: $color-dark;
         color: $color-text;
 
         &:hover {

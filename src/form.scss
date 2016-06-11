@@ -1,4 +1,4 @@
-$form-padding: 5px;
+$form-padding: 10px;
 
 input[type="text"],
 input[type="email"],
@@ -9,12 +9,20 @@ textarea {
 
     padding: $form-padding;
 
-    border: 1px solid $color-dark;
+    border: 2px solid $color-dark;
+
+    &.form-error {
+        border-color: $color-error;
+    }
 }
 
 label {
     display: block;
     margin-bottom: 0.25em;
+
+    &.form-error {
+        color: $color-error;
+    }
 }
 
 textarea {
