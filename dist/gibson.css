@@ -16,6 +16,39 @@ article {
   margin-top: 1em;
   margin-bottom: 1em; }
 
+.u-text-left {
+  text-align: left; }
+
+.u-text-center {
+  text-align: center; }
+
+.u-text-right {
+  text-align: right; }
+
+.u-text-italic {
+  font-style: italic; }
+
+.u-text-bold {
+  font-weight: 700; }
+
+.u-text-monospace {
+  font-family: "PT Mono", monospace; }
+
+.u-text-uppercase {
+  text-transform: uppercase; }
+
+.u-text-lowercase {
+  text-transform: lowercase; }
+
+.u-text-capitalize {
+  text-transform: capitalize; }
+
+.u-pull-left {
+  float: left !important; }
+
+.u-pull-right {
+  float: right !important; }
+
 .container {
   margin-left: auto;
   margin-right: auto;
