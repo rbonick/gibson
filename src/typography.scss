@@ -60,16 +60,24 @@ a {
 
 code,
 pre {
+    font-weight: 400;
 	font-family: $font-family-monospace;
-	display: block;
+
+    background-color: $color-text;
+    color: $color-text-inverse;
 }
 
 code {
-	padding-left: 10px;
-	padding-right: 10px; 
+    position: relative;
+    top: -0.1em;
 
-	background-color: $color-text;
-	color: $color-text-inverse;
+    padding: 0.2em 0.4em;
+}
+
+pre {
+	display: block;
+
+	padding: 10px;
 
 	white-space: pre-line;
 
