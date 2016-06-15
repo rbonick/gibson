@@ -5,7 +5,8 @@
 *:before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  outline: none; }
 
 main,
 section,
@@ -14,6 +15,39 @@ footer,
 article {
   margin-top: 1em;
   margin-bottom: 1em; }
+
+.u-text-left {
+  text-align: left; }
+
+.u-text-center {
+  text-align: center; }
+
+.u-text-right {
+  text-align: right; }
+
+.u-text-italic {
+  font-style: italic; }
+
+.u-text-bold {
+  font-weight: 700; }
+
+.u-text-monospace {
+  font-family: "PT Mono", monospace; }
+
+.u-text-uppercase {
+  text-transform: uppercase; }
+
+.u-text-lowercase {
+  text-transform: lowercase; }
+
+.u-text-capitalize {
+  text-transform: capitalize; }
+
+.u-pull-left {
+  float: left !important; }
+
+.u-pull-right {
+  float: right !important; }
 
 .container {
   margin-left: auto;
@@ -435,16 +469,24 @@ h5 {
 h6 {
   font-size: 0.75em; }
 
+a {
+  color: #293C93; }
+
 code,
 pre {
+  font-weight: 400;
   font-family: "PT Mono", monospace;
-  display: block; }
+  background-color: #2A324B;
+  color: #C7CCDB; }
 
 code {
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: #2A324B;
-  color: #C7CCDB;
+  position: relative;
+  top: -0.1em;
+  padding: 0.2em 0.4em; }
+
+pre {
+  display: block;
+  padding: 10px;
   white-space: pre-line;
   line-height: 1.5; }
 
@@ -475,6 +517,9 @@ label {
 
 textarea {
   min-height: 100px; }
+
+input[type="checkbox"] {
+  margin-right: 5px; }
 
 .button,
 button,
@@ -515,3 +560,39 @@ input[type="button"] {
     cursor: not-allowed;
     background-color: #C7CCDB;
     color: #2A324B; }
+
+table {
+  width: 100%;
+  border: 2px solid #2A324B;
+  border-collapse: collapse;
+  text-align: left; }
+
+th,
+td {
+  padding: 15px;
+  border-left: 1px solid #C7CCDB; }
+  th:first-child,
+  td:first-child {
+    border-left: none; }
+
+tr {
+  border-bottom: 1px solid #C7CCDB; }
+
+tfoot {
+  border-top: 2px solid #2A324B; }
+  tfoot tr {
+    border-bottom: none; }
+
+thead {
+  border-bottom: 2px solid #2A324B; }
+  thead tr {
+    border-bottom: none; }
+
+.striped tr:nth-child(even) {
+  background-color: #DCE2F2; }
+
+.borderless {
+  border: none; }
+  .borderless td,
+  .borderless th {
+    border-left: none; }
