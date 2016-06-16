@@ -2,6 +2,9 @@
 button,
 input[type="submit"],
 input[type="button"] {
+    width: 100%;
+    margin-bottom: 1em;
+
     display: inline-block;
 
     cursor: pointer;
@@ -15,6 +18,7 @@ input[type="button"] {
 
     font-size: 1em;
     text-decoration: none;
+    text-align: center;
 
     &:hover {
         background-color: darken($color-dark, 5%);
@@ -36,5 +40,10 @@ input[type="button"] {
         cursor: not-allowed;
         background-color: $color-light;
         color: $color-text;
+    }
+
+    @media($tablet){
+        width: auto;
+        margin-bottom: 0;
     }
 }

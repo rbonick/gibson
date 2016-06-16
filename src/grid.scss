@@ -1,6 +1,8 @@
-$numCols: 12;
+$num-cols: 12;
 $gutter: 2%;
 $desktop-container-width: 1050px;
+
+$column-width: 100% / $num-cols;
 
 @mixin container-base() {
     margin-left: auto;
@@ -29,7 +31,9 @@ $desktop-container-width: 1050px;
 
 .row {
     @include clearfix();
-    margin-bottom: 1em;
+
+    margin-left: -(0.5 * $gutter);
+    margin-right: -(0.5 * $gutter);
 }
 
 .col {
@@ -37,24 +41,22 @@ $desktop-container-width: 1050px;
     position: relative;
     float: left;
 
-    & + & {
-        margin-left: $gutter;
-    }
+    padding-left: 0.5 * $gutter;
+    padding-right: 0.5 * $gutter;
 }
 
-@for $i from 1 through $numCols {
+@for $i from 1 through $num-cols {
     .col-sm-#{$i} {
         @extend .col;
-        // Column width * column number + (margin * (column number - 1))
-        width: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i - 1));
+
+        width: $column-width * $i;
     }
 
     .col-md-#{$i} {
         @extend .col;
 
         @media($tablet) {
-            // Column width * column number + (margin * (column number - 1))
-            width: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i - 1));
+            width: $column-width * $i;
         }
     }
 
@@ -62,37 +64,23 @@ $desktop-container-width: 1050px;
         @extend .col;
 
         @media($desktop) {
-            // Column width * column number + (margin * (column number - 1))
-            width: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i - 1));
+            width: $column-width * $i;
         }
     }
 
-    // TODO: redo grid and fix offsets
     .col-sm-offset-#{$i} {
-        margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i + 1)) !important;
-
-        &:first-child {
-            margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * $i) !important;
-        }
+        margin-left: $column-width * $i;
     }
 
     .col-md-offset-#{$i} {
         @media($tablet) {
-            margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i + 1)) !important;
-
-            &:first-child {
-                margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * $i) !important;
-            }
+            margin-left: $column-width * $i;
         }
     }
 
     .col-lg-offset-#{$i} {
-        @media($desktop) {
-            margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * ($i + 1)) !important;
-
-            &:first-child {
-                margin-left: ((100% - ($gutter * ($numCols - 1))) / $numCols) * $i + ($gutter * $i) !important;
-            }
+        @media($tablet) {
+            margin-left: $column-width * $i;
         }
     }
 }
