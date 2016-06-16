@@ -457,6 +457,8 @@ input[type="checkbox"] {
 button,
 input[type="submit"],
 input[type="button"] {
+  width: 100%;
+  margin-bottom: 1em;
   display: inline-block;
   cursor: pointer;
   background-color: #2A324B;
@@ -464,7 +466,8 @@ input[type="button"] {
   padding: 10px 15px;
   border: 2px solid transparent;
   font-size: 1em;
-  text-decoration: none; }
+  text-decoration: none;
+  text-align: center; }
   .button:hover,
   button:hover,
   input[type="submit"]:hover,
@@ -492,6 +495,13 @@ input[type="button"] {
     cursor: not-allowed;
     background-color: #C7CCDB;
     color: #2A324B; }
+  @media (min-width: 768px) {
+    .button,
+    button,
+    input[type="submit"],
+    input[type="button"] {
+      width: auto;
+      margin-bottom: 0; } }
 
 table {
   width: 100%;
