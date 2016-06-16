@@ -12,7 +12,8 @@ main,
 section,
 header,
 footer,
-article {
+article,
+hr {
   margin-top: 1em;
   margin-bottom: 1em; }
 
