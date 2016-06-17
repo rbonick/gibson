@@ -17,6 +17,10 @@ hr {
   margin-top: 1em;
   margin-bottom: 1em; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
 .u-text-left {
   text-align: left; }
 
@@ -539,3 +543,15 @@ thead {
   .borderless td,
   .borderless th {
     border-left: none; }
+
+.card {
+  border: 2px solid #2A324B;
+  padding: 10px; }
+  .card h1,
+  .card h2,
+  .card h3,
+  .card h4,
+  .card h5,
+  .card h6 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em; }
