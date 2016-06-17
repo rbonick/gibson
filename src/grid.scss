@@ -1,5 +1,6 @@
 $num-cols: 12;
 $gutter: 2%;
+$tablet-container-width: 768px;
 $desktop-container-width: 1050px;
 
 $column-width: 100% / $num-cols;
@@ -14,7 +15,14 @@ $column-width: 100% / $num-cols;
 
 .container {
     @include container-base();
-    max-width: $desktop-container-width;
+
+    @media($tablet){
+        max-width: $tablet-container-width;
+    }
+
+    @media($desktop) {
+        max-width: $desktop-container-width;
+    }
 }
 
 .container-fluid {

@@ -58,8 +58,13 @@ img {
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
-  padding-right: 20px;
-  max-width: 1050px; }
+  padding-right: 20px; }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 768px; } }
+  @media (min-width: 1025px) {
+    .container {
+      max-width: 1050px; } }
 
 .container-fluid {
   margin-left: auto;
