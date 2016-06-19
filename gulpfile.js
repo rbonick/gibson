@@ -2,6 +2,8 @@
 
 var gulp = require('gulp');
 
+gulp.task('default', ['webserver', 'sass:watch', 'jekyll:watch']);
+
 /**
  * SASS
  */
