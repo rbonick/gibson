@@ -17,6 +17,10 @@ hr {
   margin-top: 1em;
   margin-bottom: 1em; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
 .u-text-left {
   text-align: left; }
 
@@ -54,8 +58,13 @@ hr {
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
-  padding-right: 20px;
-  max-width: 1050px; }
+  padding-right: 20px; }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 768px; } }
+  @media (min-width: 1025px) {
+    .container {
+      max-width: 1050px; } }
 
 .container-fluid {
   margin-left: auto;
@@ -424,6 +433,17 @@ small {
   font-size: 0.75em;
   color: #767B91; }
 
+ol {
+  padding-left: 1em; }
+  ol li {
+    padding-left: 0.5em; }
+
+ul {
+  padding-left: 1.5em; }
+
+li {
+  margin-bottom: 0.5em; }
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -539,3 +559,15 @@ thead {
   .borderless td,
   .borderless th {
     border-left: none; }
+
+.card {
+  border: 2px solid #2A324B;
+  padding: 10px; }
+  .card h1,
+  .card h2,
+  .card h3,
+  .card h4,
+  .card h5,
+  .card h6 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em; }

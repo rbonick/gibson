@@ -1,0 +1,106 @@
+<section class="container" id="forms">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Forms</h2>
+
+            <p>
+                Form styling is very similar to the regular grid system. Define .form-row (for extra spacing between rows) and .col-* classes, one
+                per input. Styling on form elements is automatic, with no classes needed.
+            </p>
+        </div>
+    </div>
+
+    <form>
+        <div class="form-row">
+            <div class="col-md-6">
+                <label for="firstName">First name</label>
+                <input type="text" name="firstName" id="firstName">
+            </div>
+            <div class="col-md-6">
+                <label for="lastName">Last name</label>
+                <input type="text" name="lastName" id="lastName">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-12">
+                <label for="address">Address</label>
+                <input type="text" name="address" id="address">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-6">
+                <label for="notes">Notes</label>
+                <textarea name="notes" id="notes"></textarea>
+            </div>
+            <div class="col-md-6">
+                <label for="country">Country</label>
+                <select name="country" id="country">
+                    <option>USA</option>
+                    <option>Other</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-6">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="col-md-6">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-6">
+                <label for="file">File input</label>
+                <input type="file" name="file" id="file">
+            </div>
+            <div class="col-md-6">
+                <label for="password-confirm">Confirm</label>
+                <input type="password" name="password-confirm" id="password-confirm">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-6">
+                <label for="checkbox"><input type="checkbox" name="checkbox" id="checkbox">Checkbox</label>
+            </div>
+            <div class="col-md-6">
+                <label for="radio-button-1">
+                    <input type="radio" name="radio-button" id="radio-button-1">
+                    Confirm
+                </label>
+                <label for="radio-button-2">
+                    <input type="radio" name="radio-button" id="radio-button-2">
+                    Confirm
+                </label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-12">
+                <input type="submit" value="Submit">
+            </div>
+        </div>
+    </form>
+
+    <form>
+        <div class="form-row">
+            <div class="col-md-6">
+                <p>Error fields use .form-error. Add it to the label to get the same styling.</p>
+                <label for="error" class="form-error">Error</label>
+                <input type="text" name="error" id="error" class="form-error">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-12">
+                <input type="submit" value="Submit">
+            </div>
+        </div>
+    </form>
+</section>

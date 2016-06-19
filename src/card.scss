@@ -1,0 +1,16 @@
+$card-header-margin: 0.5em;
+
+.card {
+    border: 2px solid $color-dark;
+    padding: 10px;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: $card-header-margin;
+        margin-bottom: $card-header-margin;
+    }
+}
