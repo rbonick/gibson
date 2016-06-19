@@ -88,3 +88,19 @@ small {
 	font-size: 0.75em;
 	color: $color-medium;
 }
+
+ol {
+    padding-left: 1em;
+
+    li {
+        padding-left: 0.5em;
+    }
+}
+
+ul {
+    padding-left: 1.5em;
+}
+
+li {
+    margin-bottom: 0.5em;
+}

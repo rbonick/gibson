@@ -433,6 +433,17 @@ small {
   font-size: 0.75em;
   color: #767B91; }
 
+ol {
+  padding-left: 1em; }
+  ol li {
+    padding-left: 0.5em; }
+
+ul {
+  padding-left: 1.5em; }
+
+li {
+  margin-bottom: 0.5em; }
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
