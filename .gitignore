@@ -87,3 +87,5 @@ jspm_packages
 
 
 
+/_site/
+/.jekyll-metadata
