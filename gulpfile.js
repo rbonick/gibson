@@ -45,5 +45,5 @@ gulp.task('jekyll', function (gulpCallBack){
     });
 });
 gulp.task('jekyll:watch', function() {
-    gulp.watch(['./_includes/**/*.html', './index.html'], ['jekyll']);
+    gulp.watch(['./_includes/**/*.html', './index.html', './dist/gibson.css'], ['jekyll']);
 });

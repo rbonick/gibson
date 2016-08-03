@@ -1,0 +1,91 @@
+$nav-height: 60px;
+$nav-spacing-horizontal: 15px;
+$nav-link-spacing-vertical: 20px;
+$nav-form-spacing-vertical: 7px;
+
+nav {
+    background-color: $color-white;
+    color: $color-text;
+
+    ul {
+        display: inline-block;
+        padding-left: 0;
+        list-style: none;
+        @include clearfix();
+
+        &:first-child {
+            margin-left: -$nav-spacing-horizontal;
+        }
+    }
+
+    li {
+        margin: 0;
+        padding: $nav-link-spacing-vertical $nav-spacing-horizontal;
+        height: $nav-height;
+
+        float: left;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-text;
+
+        &:hover {
+            color: lighten($color-text, 10%);
+        }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="search"],
+    select {
+        width: 150px;
+        //border: 2px solid $color-inverse;
+        //background-color: $color-dark;
+        //color: $color-inverse;
+    }
+
+    .brand {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .form-row {
+        padding: $nav-form-spacing-vertical $nav-spacing-horizontal;
+        margin-bottom: 0;
+    }
+
+    &.inverted {
+        background-color: $color-dark;
+        color: $color-inverse;
+
+        a {
+            text-decoration: none;
+            color: $color-inverse;
+
+            &:hover {
+                color: $color-white;
+            }
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="search"],
+        select {
+            border: 2px solid $color-inverse;
+            background-color: $color-dark;
+            color: $color-inverse;
+        }
+
+        input[type="submit"]{
+            color: $color-text;
+            background-color: $color-inverse;
+
+            &:hover {
+                background-color: lighten($color-inverse, 5%);
+            }
+        }
+    }
+}
