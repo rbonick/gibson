@@ -11,7 +11,7 @@ var sass = require('gulp-sass');
 
 gulp.task('sass', function () {
     return gulp.src('./src/gibson.scss')
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(gulp.dest('./dist'));
 });
 

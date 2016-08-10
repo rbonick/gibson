@@ -47,7 +47,6 @@ $column-width: 100% / $num-cols;
 .col {
     width: 100%;
     position: relative;
-    float: left;
 
     padding-left: 0.5 * $gutter;
     padding-right: 0.5 * $gutter;
@@ -59,33 +58,45 @@ $column-width: 100% / $num-cols;
 
         width: $column-width * $i;
     }
+}
 
+@for $i from 1 through $num-cols {
     .col-md-#{$i} {
         @extend .col;
 
         @media($tablet) {
+            float: left;
             width: $column-width * $i;
         }
     }
+}
 
+@for $i from 1 through $num-cols {
     .col-lg-#{$i} {
         @extend .col;
 
         @media($desktop) {
+            float: left;
             width: $column-width * $i;
         }
     }
+}
 
+@for $i from 1 through $num-cols {
     .col-sm-offset-#{$i} {
         margin-left: $column-width * $i;
     }
+}
 
+@for $i from 1 through $num-cols {
     .col-md-offset-#{$i} {
         @media($tablet) {
             margin-left: $column-width * $i;
         }
     }
+}
 
+@for $i from 1 through $num-cols {
     .col-lg-offset-#{$i} {
         @media($tablet) {
             margin-left: $column-width * $i;
