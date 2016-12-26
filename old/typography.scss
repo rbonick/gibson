@@ -1,0 +1,109 @@
+html,
+body,
+input,
+select,
+button {
+	font-size: $font-base;
+}
+
+* {
+	font-family: $font-family-standard;
+	color: $color-text;
+	line-height: 1.35;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+code {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700;
+}
+
+h1 {
+	@include font-size(36);
+}
+
+h2 {
+	@include font-size(30);
+}
+
+h3 {
+	@include font-size(24);
+}
+
+h4 {
+	@include font-size(18);
+}
+
+h5 {
+	@include font-size(14);
+}
+
+h6 {
+	@include font-size(12);
+}
+
+a {
+	color: $color-links;
+}
+
+code,
+pre {
+    font-weight: 400;
+	font-family: $font-family-monospace;
+
+    background-color: $color-text;
+    color: $color-inverse;
+}
+
+code {
+    position: relative;
+    top: -0.1em;
+
+    padding: 0.2em 0.4em;
+}
+
+pre {
+	display: block;
+
+	padding: 10px;
+
+	white-space: pre-line;
+
+    line-height: 1.5;
+}
+
+small {
+	font-size: 0.75em;
+	color: $color-medium;
+}
+
+ol {
+    padding-left: 1em;
+
+    li {
+        padding-left: 0.5em;
+    }
+}
+
+ul {
+    padding-left: 1.5em;
+}
+
+li {
+    margin-bottom: 0.5em;
+}

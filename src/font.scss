@@ -1,8 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
 @import url(https://fonts.googleapis.com/css?family=PT+Mono);
 
-$font-family-standard: 'Oswald', sans-serif;
+$font-family-body: 'Oswald', sans-serif;
+$font-family-heading: $font-family-body;
 $font-family-monospace: 'PT Mono', monospace;
 
-$font-base-size: 16;
-$font-base: $font-base-size + px;
+// From Gutenberg
+$base-font-size: 100; // Converts to 16px
+$line-height: 1.6;
+$base-font-pixels: 16 * ($base-font-size / 100);
+$leading: round($base-font-pixels * $line-height);
+$leading-rem: $leading / $base-font-pixels;
+
+$base: $base-font-pixels;
+$max-width: 1025px;

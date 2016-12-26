@@ -1,4 +1,4 @@
-@mixin font-size($font-size, $base: $base-font-pixels) {
+@mixin font-size($font-size, $base: $font-base-size) {
 	font-size: ($font-size / $base) + em;
 }
 
